@@ -1,0 +1,7 @@
+<li>
+  <div id="title">{{article.title}}</div>
+  <button (click)="changeDescVisibility()">{{descIsVisible ? 'Show Less' : 'Read More'}}</button>
+  <button (click)="changeImgVisibility()">{{imgIsVisible ? 'Hide' : 'Show'}} Image</button>
+  <div *ngIf="descIsVisible" class="desc">{{article.description}}</div>
+  <img *ngIf="imgIsVisible" [src]="article.imageUrl" alt="article-image" />
+</li>
